@@ -1,11 +1,12 @@
-package com.example.nlquiz
+package com.example.nlquiz.Activities
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.widget.AppCompatEditText
+import androidx.appcompat.app.AppCompatActivity
+import com.example.nlquiz.R
 import com.example.nlquiz.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,15 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             if (etName.text.isNullOrEmpty())
                 Toast.makeText(this, getString(R.string.empty_name_warning), Toast.LENGTH_LONG).show()
+            else
+                moveToQuestions()
         }
     }
+
+    private fun moveToQuestions() {
+        val intent = Intent(this, QuestionsActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 }

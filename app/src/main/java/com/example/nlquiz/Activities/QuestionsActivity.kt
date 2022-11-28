@@ -1,7 +1,8 @@
-package com.example.nlquiz
+package com.example.nlquiz.Activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.nlquiz.R
 
 class QuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
