@@ -5,6 +5,7 @@
     <color name="accent">#004E89</color>
     <color name="accent_variant">#1A659E</color>
     <color name="background">#EFEFD0</color>
+    <color name="intro_bg">#005F73</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
