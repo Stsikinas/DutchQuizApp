@@ -8,4 +8,6 @@
     <color name="intro_bg">#005F73</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="textDarkGrey">#495057</color>
+    <color name="textLightGrey">#6C757D</color>
 </resources>
