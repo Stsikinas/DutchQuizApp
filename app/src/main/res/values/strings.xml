@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">NL Quiz</string>
+    <!-- Intro Screen Strings -->
     <string name="welcome_title">This is NL Quiz</string>
     <string name="welcome">Welcome</string>
     <string name="enter_name">Please enter your name…</string>
     <string name="name_hint">eg. John Doe</string>
     <string name="start">START</string>
+    <string name="empty_name_warning">Please enter your name</string>
+
 </resources>
