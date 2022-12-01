@@ -15,7 +15,6 @@ object Constants {
             listOf("London", "Paris", "Brussels", "Copenhagen" ),
             2
         )
-
         questionsList.add(q1)
 
         val q2 = Question(
@@ -25,7 +24,6 @@ object Constants {
             listOf("Vincent Van Gogh", "Govert Flinck", "Paulus Potter", "Rembrandt" ),
             0
         )
-
         questionsList.add(q2)
 
         val q3 = Question(
@@ -35,7 +33,6 @@ object Constants {
             listOf("Ajax", "Feyenoord", "Almere", "FC Utrecht" ),
             3
         )
-
         questionsList.add(q3)
 
         val q4 = Question(
@@ -45,7 +42,6 @@ object Constants {
             listOf("25/3/2013", "1/1/2013", "30/4/2013", "30/1/2013" ),
             2
         )
-
         questionsList.add(q4)
 
         val q5 = Question(
@@ -55,7 +51,6 @@ object Constants {
             listOf("Hands", "Gloves", "Eyes", "Bicycles" ),
             1
         )
-
         questionsList.add(q5)
 
         val q6 = Question(
@@ -65,7 +60,6 @@ object Constants {
             listOf("Canada/Britain/Poland", "Canada/Spain/France", "Spain/France", "Canada/USA" ),
             0
         )
-
         questionsList.add(q6)
 
         val q7 = Question(
@@ -75,7 +69,6 @@ object Constants {
             listOf("Journaal extra", "Het Journaal", "NOS Sports", "Voice van Holland" ),
             0
         )
-
         questionsList.add(q7)
 
         val q8 = Question(
@@ -85,7 +78,6 @@ object Constants {
             listOf("Oliebollen", "Pannekoeken", "Kroket", "Hollandse Nieuwe" ),
             3
         )
-
         questionsList.add(q8)
 
         val q9 = Question(
@@ -95,7 +87,6 @@ object Constants {
             listOf("Goud", "Blijven slapen", "Picollo", "Bon Gepakt" ),
             1
         )
-
         questionsList.add(q9)
 
         val q10 = Question(
@@ -105,7 +96,6 @@ object Constants {
             listOf("Zuid-Holland", "Flevoland", "Zeeland", "Friesland" ),
             3
         )
-
         questionsList.add(q10)
 
         return questionsList

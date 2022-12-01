@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-nodpi/selected_option_border.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/default_option_border.xml" value="0.2205" />
+        <entry key="app/src/main/res/drawable/selected_option_border.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2625" />
-        <entry key="app/src/main/res/layout/activity_questions.xml" value="0.18489583333333334" />
+        <entry key="app/src/main/res/layout/activity_questions.xml" value="0.33" />
       </map>
     </option>
   </component>

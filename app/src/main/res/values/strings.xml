@@ -8,4 +8,14 @@
     <string name="start">START</string>
     <string name="empty_name_warning">Please enter your name</string>
 
+    <!-- Questions Screen Strings -->
+    <string name="progress_placeholder">0/10</string>
+    <string name="progress_text">%d/%d</string>
+    <string name="submit">SUBMIT</string>
+    <string name="end">END</string>
+
+    <!-- Helping Strings -->
+    <string name="image_description">Quiz Image</string>
+    <string name="options_description">Answer</string>
+
 </resources>
