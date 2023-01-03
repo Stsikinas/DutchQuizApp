@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.nlquiz.Helpers.Constants
 import com.example.nlquiz.R
 import com.example.nlquiz.databinding.ActivityMainBinding
 
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun moveToQuestions() {
         val intent = Intent(this, QuestionsActivity::class.java)
+        intent.putExtra(Constants.USER_NAME, etName.text.toString())
         startActivity(intent)
         finish()
     }

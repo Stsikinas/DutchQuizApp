@@ -5,6 +5,10 @@ import com.example.nlquiz.R
 
 object Constants {
 
+    const val USER_NAME = "USER_NAME"
+    const val SCORE = "SCORE"
+    const val TOTAL_Q = "TOTAL_QUESTIONS"
+
     fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
 

@@ -23,6 +23,6 @@
     <string name="results">RESULTS</string>
     <string name="congratulations">Congratulations!</string>
     <string name="name">Username</string>
-    <string name="score">Your score is %i out of %i</string>
+    <string name="score">Your score is %d out of %d</string>
 
 </resources>

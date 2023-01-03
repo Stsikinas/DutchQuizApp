@@ -1,5 +1,6 @@
 package com.example.nlquiz.Activities
 
+import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Typeface
 import android.os.Build
@@ -19,6 +20,8 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
     private var mSelectedPosition: Int = 0
+    private var mScore: Int = 0
+    private var mUsername: String? = null
 
     private lateinit var binding: ActivityQuestionsBinding
 
@@ -37,6 +40,8 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mUsername = intent.getStringExtra(Constants.USER_NAME)
 
         // Bind view to replace findViewById
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
@@ -100,6 +105,9 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
             option.setTypeface(Typeface.DEFAULT)
             option.background = ContextCompat.getDrawable(this, R.drawable.default_option_border)
         }
+        if (mCurrentPosition != mQuestionsList?.size) {
+            btnSubmit.text = getString(R.string.submit)
+        }
     }
 
     private fun selectedOptionView(textView: TextView, selectedOptionPos: Int) {
@@ -134,12 +142,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= (mQuestionsList?.size ?: 0) -> {
                             setQuestion()
                         }
-
-                        else -> {
-                            Toast.makeText(this,
-                                "Congratulations. You've reached the end of the quiz!",
-                                Toast.LENGTH_LONG).show()
-                        }
+                        else -> showResultsScreen()
                     }
                 } else {
                     val question = mQuestionsList?.get(mCurrentPosition - 1)
@@ -152,6 +155,8 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private fun showResult(question: Question) {
         if (question.correctIndex != mSelectedPosition) {
             selectAnswerView(mSelectedPosition, R.drawable.incorrect_option_border)
+        } else {
+            mScore++
         }
         selectAnswerView(question.correctIndex, R.drawable.correct_option_border)
 
@@ -161,6 +166,15 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
             btnSubmit.text = getString(R.string.move_to_next)
 
         mSelectedPosition = 0
+    }
+
+    private fun showResultsScreen() {
+        val intent = Intent(this, ResultActivity::class.java)
+        intent.putExtra(Constants.USER_NAME, mUsername)
+        intent.putExtra(Constants.TOTAL_Q, mQuestionsList?.size)
+        intent.putExtra(Constants.SCORE, mScore)
+        startActivity(intent)
+        finish()
     }
 
     private fun selectAnswerView(answer: Int, drawableView: Int) {
