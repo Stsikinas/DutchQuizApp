@@ -12,7 +12,8 @@
     <string name="progress_placeholder">0/10</string>
     <string name="progress_text">%d/%d</string>
     <string name="submit">SUBMIT</string>
-    <string name="end">END</string>
+    <string name="finish">FINISH</string>
+    <string name="move_to_next">GO TO NEXT QUESTION</string>
 
     <!-- Helping Strings -->
     <string name="image_description">Quiz Image</string>

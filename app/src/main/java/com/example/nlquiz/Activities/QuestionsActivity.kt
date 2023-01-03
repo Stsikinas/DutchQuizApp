@@ -72,7 +72,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setQuestion() {
-
+        defaultOptionsView()
         // We know that list can't be empty
         val question = mQuestionsList!![mCurrentPosition - 1]
 
@@ -87,8 +87,6 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvOptionThree.text = question.options[2]
         tvOptionFour.text = question.options[3]
 
-        if (mCurrentPosition == mQuestionsList!!.size)
-            btnSubmit.text = getString(R.string.end)
     }
 
     private fun defaultOptionsView() {
@@ -128,8 +126,57 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
             R.id.tvOptionFour -> tvOptionFour.let {
                 selectedOptionView(it, 4)
             }
-            R.id.btnSubmit -> {}// TODO: Implement submission
-        }
+            R.id.btnSubmit -> {
+                if (mSelectedPosition == 0) {
+                    mCurrentPosition++
 
+                    when {
+                        mCurrentPosition <= (mQuestionsList?.size ?: 0) -> {
+                            setQuestion()
+                        }
+
+                        else -> {
+                            Toast.makeText(this,
+                                "Congratulations. You've reached the end of the quiz!",
+                                Toast.LENGTH_LONG).show()
+                        }
+                    }
+                } else {
+                    val question = mQuestionsList?.get(mCurrentPosition - 1)
+                    showResult(question!!)
+                }
+            }
+        }
+    }
+
+    private fun showResult(question: Question) {
+        if (question.correctIndex != mSelectedPosition) {
+            selectAnswerView(mSelectedPosition, R.drawable.incorrect_option_border)
+        }
+        selectAnswerView(question.correctIndex, R.drawable.correct_option_border)
+
+        if (mCurrentPosition == mQuestionsList!!.size)
+            btnSubmit.text = getString(R.string.finish)
+        else
+            btnSubmit.text = getString(R.string.move_to_next)
+
+        mSelectedPosition = 0
+    }
+
+    private fun selectAnswerView(answer: Int, drawableView: Int) {
+        when(answer) {
+            1 -> {
+                tvOptionOne.background = ContextCompat.getDrawable(this, drawableView)
+            }
+            2 -> {
+                tvOptionTwo.background = ContextCompat.getDrawable(this, drawableView)
+            }
+            3 -> {
+                tvOptionThree.background = ContextCompat.getDrawable(this, drawableView)
+            }
+            4 -> {
+                tvOptionFour.background = ContextCompat.getDrawable(this, drawableView)
+            }
+        }
     }
 }

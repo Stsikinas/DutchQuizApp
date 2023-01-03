@@ -13,7 +13,7 @@ object Constants {
             "Which is the closest capital from Amsterdam?",
             R.drawable.ic_map,
             listOf("London", "Paris", "Brussels", "Copenhagen" ),
-            2
+            3
         )
         questionsList.add(q1)
 
@@ -22,7 +22,7 @@ object Constants {
             "Who is this famous painter?",
             R.drawable.ic_vvg,
             listOf("Vincent Van Gogh", "Govert Flinck", "Paulus Potter", "Rembrandt" ),
-            0
+            1
         )
         questionsList.add(q2)
 
@@ -31,7 +31,7 @@ object Constants {
             "Which footbal team has Galgenwaard as home stadium?",
             R.drawable.ic_galgenwaard,
             listOf("Ajax", "Feyenoord", "Almere", "FC Utrecht" ),
-            3
+            4
         )
         questionsList.add(q3)
 
@@ -40,7 +40,7 @@ object Constants {
             "When was King Willem-Alexander crowned?",
             R.drawable.ic_king,
             listOf("25/3/2013", "1/1/2013", "30/4/2013", "30/1/2013" ),
-            2
+            3
         )
         questionsList.add(q4)
 
@@ -49,7 +49,7 @@ object Constants {
             "What does \"Handschoenen\" mean?",
             R.drawable.ic_alphabet,
             listOf("Hands", "Gloves", "Eyes", "Bicycles" ),
-            1
+            2
         )
         questionsList.add(q5)
 
@@ -58,7 +58,7 @@ object Constants {
             "Which countries liberated NL in WW2?",
             R.drawable.ic_liberation,
             listOf("Canada/Britain/Poland", "Canada/Spain/France", "Spain/France", "Canada/USA" ),
-            0
+            1
         )
         questionsList.add(q6)
 
@@ -67,7 +67,7 @@ object Constants {
             "Which Dutch TV program had the most accolades nation-wide in 2020?",
             R.drawable.ic_tv_program,
             listOf("Journaal extra", "Het Journaal", "NOS Sports", "Voice van Holland" ),
-            0
+            1
         )
         questionsList.add(q7)
 
@@ -76,7 +76,7 @@ object Constants {
             "Which traditional snack is considered the most popular by locals?",
             R.drawable.ic_hollandse_nieuwe,
             listOf("Oliebollen", "Pannekoeken", "Kroket", "Hollandse Nieuwe" ),
-            3
+            4
         )
         questionsList.add(q8)
 
@@ -85,7 +85,7 @@ object Constants {
             "Which Dutch song had the most streams in Spotify in 2021?",
             R.drawable.ic_music,
             listOf("Goud", "Blijven slapen", "Picollo", "Bon Gepakt" ),
-            1
+            2
         )
         questionsList.add(q9)
 
@@ -94,7 +94,7 @@ object Constants {
             "Which Dutch region's flag is this?",
             R.drawable.ic_friesland_flag,
             listOf("Zuid-Holland", "Flevoland", "Zeeland", "Friesland" ),
-            3
+            4
         )
         questionsList.add(q10)
 

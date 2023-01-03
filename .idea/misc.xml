@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-hdpi/correct_option_border.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-hdpi/incorrect_option_border.xml" value="0.1725" />
         <entry key="app/src/main/res/drawable-nodpi/selected_option_border.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/default_option_border.xml" value="0.2205" />
         <entry key="app/src/main/res/drawable/selected_option_border.xml" value="0.18" />
