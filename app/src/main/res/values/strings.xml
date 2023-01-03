@@ -19,4 +19,10 @@
     <string name="image_description">Quiz Image</string>
     <string name="options_description">Answer</string>
 
+    <!-- Result Screen Strings -->
+    <string name="results">RESULTS</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="name">Username</string>
+    <string name="score">Your score is %i out of %i</string>
+
 </resources>
